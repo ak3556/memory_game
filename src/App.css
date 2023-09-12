@@ -1,38 +1,69 @@
-.App {
+/* Add a colorful gradient background to the entire app */
+body {
+  /* Choose your desired background gradient colors */
+  background: linear-gradient(45deg, #1b1414, #474747);
+  /* Specify the direction and colors you want for the gradient */
+
+  /* Set the background size and positioning */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Add a minimum height to ensure content is visible */
+  min-height: 100vh;
+
+  /* Center content vertically and horizontally */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Additional styling for text and button */
+  color: white;
+  font-size: 24px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style the "New Game!" button */
+button {
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button:hover {
+  background-color: white;
+  color: #333; /* Change to your desired text color */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* You can keep the existing styles for other elements */
+
+.App {
+  max-width: 860px;
+  margin: 40px auto;
   display: flex;
+  color: burlywood;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.turns {
+  font-size: 2em;
+  margin-top: 40px;
 }
